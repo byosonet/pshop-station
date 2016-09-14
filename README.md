@@ -5,7 +5,7 @@
 </a>
 <br>
 ## Autor:
-<a href="https://www.linkedin.com/pub/gustavo-ulises-trejo-armenta/94/aa6/262">Ulysses M@c</a>
+<a href="https://mx.linkedin.com/in/gustavo-trejo-262aa694">Ulysses M@c</a>
 
 ## Versión del Proyecto
 V 0.1

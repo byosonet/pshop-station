@@ -1,8 +1,7 @@
 ## Proyecto La Estación Pastelería
 <br>
 <a href="https://www.facebook.com/Laestacionpasteleria/" target="_blank">
-  <img src="https://drive.google.com/open?id=0B5BmDeYZxJdNWTlGRlNVaEZaVWM" 
-  style="width: 40%;height: auto;border-radius: 10px;"/>
+  <img src="https://lh4.googleusercontent.com/ApnpmVHGzc7IRtl0C_hhL_dRUPCp2H5St7rbOhQ_E0Eezc2gpnnYrpJiLNHiYylG_xROdVjfMt1TsXo"/>
 </a>
 <br>
 ## Autor:

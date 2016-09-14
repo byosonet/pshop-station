@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+  
+  	<!-- DIALECT PARA MYSQL -->
+    <property name="org.hibernate.transaction">true</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    
+    <!-- CONEXION A DEV1 PUBLICO -->
+    <!-- 
+    <property name="hibernate.connection.url">jdbc:mysql://127.7.93.2:3306/bstore</property>
+    <property name="hibernate.connection.username">adminEjguFet</property>
+    <property name="hibernate.connection.password">gzNpaw3sHD7U</property> 
+    -->
+    
+    <!-- CONEXION A DEV2 PUBLICO -->
+    <!-- 
+    <property name="hibernate.connection.url">jdbc:mysql://127.11.143.130:3306/bstore</property>
+    <property name="hibernate.connection.username">adminMpvg6Nv</property>
+    <property name="hibernate.connection.password">X6wd5_Z3pJ65</property> 
+    -->
+    
+    <!-- CONEXION A DESARROLLO LOCAL-->
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bstore</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">toor</property>
+    
+    <!-- PROPIEDADES HIBERNATE -->
+    <property name="hibernate.connection.pool_size">5</property>
+    <property name="hibernate.show_sql">false</property>
+    <property name="hibernate.format_sql">false</property>
+    <property name="hibernate.use_sql_comments">true</property>
+    <property name="hibernate.cache.use_query_cache">false</property>
+    <property name="hibernate.generate_statistics">false</property>
+    <property name="hibernate.cache.use_structured_entries">false</property>
+    <property name="hibernate.cache.use_second_level_cache">true</property>
+    <property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+    <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    
+    <!-- MAPPING PARA BSTORE -->
+    <mapping resource="com/pshop/station/persistence/mapping/Usuario.hbm.xml"/>
+    <mapping resource="com/pshop/station/persistence/mapping/Compra.hbm.xml"/>
+    <mapping resource="com/pshop/station/persistence/mapping/FormaPago.hbm.xml"/>
+    <mapping resource="com/pshop/station/persistence/mapping/Publicacion.hbm.xml"/>
+    <mapping resource="com/pshop/station/persistence/mapping/Fuente.hbm.xml"/>
+    <mapping resource="com/pshop/station/persistence/mapping/Editorial.hbm.xml"/>
+    <mapping resource="com/pshop/station/persistence/mapping/Coleccion.hbm.xml"/>
+    <mapping resource="com/pshop/station/persistence/mapping/Perfil.hbm.xml"/>
+    <mapping resource="com/pshop/station/persistence/mapping/Properties.hbm.xml"/>
+    <mapping resource="com/pshop/station/persistence/mapping/Plantilla.hbm.xml"/>
+    
+    <!-- OTHER MYSAL
+    	SET GLOBAL MAX_CONNECTIONS = 5000;
+    	SHOW STATUS LIKE '%onn%';
+    	SHOW VARIABLES LIKE "max_connections";
+     -->
+
+  </session-factory>
+</hibernate-configuration>

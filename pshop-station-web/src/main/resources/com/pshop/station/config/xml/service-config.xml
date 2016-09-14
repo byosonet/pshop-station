@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">  
+  
+    <bean id="usuarioService" 
+          class="com.pshop.station.service.UsuarioServiceImpl"/>
+    <bean id="coleccionService" 
+          class="com.pshop.station.service.ColeccionServiceImpl"/>
+    <bean id="publicacionService" 
+          class="com.pshop.station.service.PublicacionServiceImpl"/>
+	<bean id="compraService" 
+          class="com.pshop.station.service.CompraServiceImpl"/>
+	<bean id="editorialService" 
+          class="com.pshop.station.service.EditorialServiceImpl"/>
+    <bean id="formaPagoService" 
+          class="com.pshop.station.service.FormaPagoServiceImpl"/>
+    <bean id="fuenteService" 
+          class="com.pshop.station.service.FuenteServiceImpl"/>
+    <bean id="perfilService" 
+          class="com.pshop.station.service.PerfilServiceImpl"/>
+    <bean id="propertyService" 
+          class="com.pshop.station.service.PropertyServiceImpl"/>
+    <bean id="plantillaService" 
+          class="com.pshop.station.service.PlantillaServiceImpl"/>
+          
+    <!-- Adapters Externos-->
+    <bean id="droolRuleAge" 
+          class="com.pshop.station.drools.DroolRuleAgeImpl"/>
+    <bean id="conektaAdapter"
+          class="com.pshop.station.conekta.ConektaAdapterImpl"/>
+    
+</beans>

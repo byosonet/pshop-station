@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="usuarioDao" class="com.pshop.station.persistence.dao.UsuarioDaoImpl"
+		p:sessionFactory-ref="sessionFactory" />
+	<bean id="compraDao" class="com.pshop.station.persistence.dao.CompraDaoImpl"
+		p:sessionFactory-ref="sessionFactory" />
+	<bean id="publicacionDao" class="com.pshop.station.persistence.dao.PublicacionDaoImpl"
+		p:sessionFactory-ref="sessionFactory" />
+	<bean id="coleccionDao" class="com.pshop.station.persistence.dao.ColeccionDaoImpl"
+		p:sessionFactory-ref="sessionFactory" />
+	<bean id="editorialDao" class="com.pshop.station.persistence.dao.EditorialDaoImpl"
+		p:sessionFactory-ref="sessionFactory" />
+	<bean id="formaPagoDao" class="com.pshop.station.persistence.dao.FormaPagoDaoImpl"
+		p:sessionFactory-ref="sessionFactory" />
+	<bean id="fuenteDao" class="com.pshop.station.persistence.dao.FuenteDaoImpl"
+		p:sessionFactory-ref="sessionFactory" />
+	<bean id="perfilDao" class="com.pshop.station.persistence.dao.PerfilDaoImpl"
+		p:sessionFactory-ref="sessionFactory" />
+	<bean id="propertyDao" class="com.pshop.station.persistence.dao.PropertyDaoImpl"
+		p:sessionFactory-ref="sessionFactory" />
+
+	<bean id="usuarioService" class="com.pshop.station.service.UsuarioServiceImpl" />
+	<bean id="coleccionService" class="com.pshop.station.service.ColeccionServiceImpl" />
+	<bean id="publicacionService" class="com.pshop.station.service.PublicacionServiceImpl" />
+	<bean id="compraService" class="com.pshop.station.service.CompraServiceImpl" />
+	<bean id="editorialService" class="com.pshop.station.service.EditorialServiceImpl" />
+	<bean id="formaPagoService" class="com.pshop.station.service.FormaPagoServiceImpl" />
+	<bean id="fuenteService" class="com.pshop.station.service.FuenteServiceImpl" />
+	<bean id="perfilService" class="com.pshop.station.service.PerfilServiceImpl" />
+	<bean id="propertyService" class="com.pshop.station.service.PropertyServiceImpl" />
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"
+		p:configLocation="classpath:com/pshop.station/persistence/config/hibernate.cfg.xml" />
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+		p:sessionFactory-ref="sessionFactory" />
+
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<context:annotation-config />
+</beans>

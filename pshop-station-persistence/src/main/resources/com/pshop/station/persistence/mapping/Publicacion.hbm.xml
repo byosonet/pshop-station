@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-jun-2016 21:47:36 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.pshop.station.persistence.pojo.Publicacion" table="PUBLICACION" catalog="bstore">
+		<id name="id" type="int">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="descuento" type="big_decimal">
+            <column name="DESCUENTO" precision="5" />
+        </property>
+        <property name="estatus" type="int">
+            <column name="ESTATUS" not-null="true" />
+        </property>
+        <property name="isbn" type="string">
+            <column name="ISBN" length="30" not-null="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="NOMBRE" length="100" not-null="true" unique="true" />
+        </property>
+        <property name="numeroPaginas" type="java.lang.Short">
+            <column name="NUMERO_PAGINAS" />
+        </property>
+        <property name="portada" type="binary">
+            <column name="PORTADA" />
+        </property>
+        <property name="precio" type="big_decimal">
+            <column name="PRECIO" precision="5" />
+        </property>
+        <property name="resumen" type="string">
+            <column name="RESUMEN" />
+        </property>
+        <property name="urlArchivo" type="string">
+            <column name="URL_ARCHIVO" length="250" not-null="true" />
+        </property>
+        <property name="portadaUrl" type="string">
+            <column name="PORTADA_URL" length="200" />
+        </property>
+        <property name="fechaUmodif" type="timestamp">
+            <column name="FECHA_UMODIF" length="19" not-null="true" />
+        </property>
+        <property name="idUsuarioUmodif" type="int">
+            <column name="ID_USUARIO_UMODIF" not-null="true" />
+        </property>
+        <many-to-one name="coleccion" class="com.pshop.station.persistence.pojo.Coleccion" fetch="select" lazy="false"> 
+        	<column name="ID_COLECCION"/> 
+        </many-to-one>
+        <many-to-one name="usuario" class="com.pshop.station.persistence.pojo.Usuario" fetch="select" lazy="false"> 
+        	<column name="USUARIOALTA"/> 
+        </many-to-one>
+        <many-to-one name="fuente" class="com.pshop.station.persistence.pojo.Fuente" fetch="select" lazy="false"> 
+        	<column name="ID_FUENTE"/> 
+        </many-to-one>
+        <many-to-one name="editorial" class="com.pshop.station.persistence.pojo.Editorial" fetch="select" lazy="false"> 
+        	<column name="ID_EDITORIAL"/> 
+        </many-to-one>
+    </class>
+</hibernate-mapping>

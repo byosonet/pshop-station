@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="principal" template="/WEB-INF/views/layout/principal.jsp">
+            <put-attribute name="title" value="eQuivira"/>
+	</definition>
+	
+	<definition name="indexPrincipal" extends="principal">
+		<put-attribute name="header" value="Bienvenido"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/body.jsp"/>
+	</definition>
+	
+	<definition name="colecciones" extends="principal">
+		<put-attribute name="header" value="Colecciones"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/colecciones.jsp"/>
+	</definition>
+	<definition name="coleccionAdmin" extends="principal">
+		<put-attribute name="header" value="Administración de Colecciones"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/coleccionAdmin.jsp"/>
+	</definition>
+	
+	<definition name="publicaciones" extends="principal">
+		<put-attribute name="header" value="Publicaciones"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/publicaciones.jsp"/>
+	</definition>
+	<definition name="publicacionesAdmin" extends="principal">
+		<put-attribute name="header" value="Publicaciones"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/publicacionAdmin.jsp"/>
+	</definition>
+	
+	<definition name="editoriales" extends="principal">
+		<put-attribute name="header" value="Editoriales"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/editoriales.jsp"/>
+	</definition>
+	<definition name="fuentesAdmin" extends="principal">
+		<put-attribute name="header" value="Editoriales"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/fuenteAdmin.jsp"/>
+	</definition>
+	
+	<definition name="publicacionHTML" extends="principal">
+		<put-attribute name="header" value="Publicacion HTML"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/publicacionHTML.jsp"/>
+	</definition>
+	
+	<definition name="detalleCompra" extends="principal">
+		<put-attribute name="header" value="Detalle Compra"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/detalleCompra.jsp"/>
+	</definition>
+	
+	<definition name="pagoCompra" extends="principal">
+		<put-attribute name="header" value="Pago de Compra"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/pagoCompra.jsp"/>
+	</definition>
+	
+	<definition name="historialCompra" extends="principal">
+		<put-attribute name="header" value="Historial de Compra"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/historialCompra.jsp"/>
+	</definition>
+	
+	<definition name="editorialAdd" extends="principal">
+		<put-attribute name="header" value="Editorial Add"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/editorialAdd.jsp"/>
+	</definition>
+	
+	<definition name="coleccionAdd" extends="principal">
+		<put-attribute name="header" value="Coleccion Add"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/coleccionAdd.jsp"/>
+	</definition>
+	
+	<definition name="fuenteAdd" extends="principal">
+		<put-attribute name="header" value="Fuente Add"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/fuenteAdd.jsp"/>
+	</definition>
+	
+	<definition name="publicacionAdd" extends="principal">
+		<put-attribute name="header" value="Fuente Add"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/publicacionAdd.jsp"/>
+	</definition>
+	
+	<definition name="perfilUsuario" extends="principal">
+		<put-attribute name="header" value="Perfil Usuario"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/perfilUsuario.jsp"/>
+	</definition>
+	<definition name="perfilesAdmin" extends="principal">
+		<put-attribute name="header" value="Perfil Usuario"/>
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/bstore/perfilAdmin.jsp"/>
+	</definition>
+	
+	<definition name="login" template="/WEB-INF/views/layout/login.jsp">
+            <put-attribute name="title" value="eQuivira"/>
+            <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
+            <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
+	</definition>
+        
+	<definition name="registrar" extends="login">
+            <put-attribute name="contenido" value="/WEB-INF/views/jsp/page/registrar.jsp"/>
+	</definition>
+	
+	<definition name="password" extends="login">
+		<put-attribute name="contenido" value="/WEB-INF/views/jsp/page/password.jsp"/>
+	</definition>
+        
+</tiles-definitions>
